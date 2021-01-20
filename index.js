@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs")
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res)=>{
     res.status(200).json({
@@ -49,5 +50,5 @@ app.get("/list-folder-content", (req, res)=>{
     })
 });
 
-let  PORT  = 3333;
+
 app.listen(PORT, ()=>console.log(`Node file system API is running on port - ${PORT}`));
